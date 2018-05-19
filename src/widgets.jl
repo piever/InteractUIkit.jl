@@ -1,9 +1,9 @@
-choosefile(::UIkit, args...; class="uk-input", kwargs...) = choosefile(NativeHTML(), args...; class=class, kwargs...)
+filepicker(::UIkit, args...; class="uk-input", kwargs...) = filepicker(NativeHTML(), args...; class=class, kwargs...)
 
 autocomplete(::UIkit, args...; class="uk-input", kwargs...) = autocomplete(NativeHTML(), args...; class=class, kwargs...)
 
-dropdown(::UIkit, args...; class="uk-select", kwargs...) =
-    dropdown(NativeHTML(), args...; postprocess = dom"div.select", class=class, kwargs...)
+dropdown(::UIkit, options::Associative; class="uk-select", kwargs...) =
+    dropdown(NativeHTML(), option; postprocess = dom"div.select", class=class, kwargs...)
 
 checkbox(::UIkit, args...; class="uk-checkbox", kwargs...) =
     checkbox(NativeHTML(), args...; class=class, kwargs...)

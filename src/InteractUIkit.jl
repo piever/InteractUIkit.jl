@@ -2,8 +2,8 @@ module InteractUIkit
 
 using Reexport
 @reexport using InteractNative
-using WebIO, Vue
-import InteractNative: choosefile, autocomplete, input, dropdown, checkbox, toggle, textbox, button, slider, setlibraries
+using WebIO, Vue, DataStructures
+import InteractNative: filepicker, autocomplete, input, dropdown, checkbox, toggle, textbox, button, slider, setlibraries
 import InteractNative: NativeHTML
 
 export UIkit
