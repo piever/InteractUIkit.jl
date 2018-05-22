@@ -28,11 +28,11 @@ togglebuttons(::UIkit, options::Associative; class="", outer = identity, activec
         outer = outer∘Node(:div, className = "uk-button-group", attributes = outer_attributes),
         class = "uk-button $class", activeclass = activeclass, kwargs...)
 
-# tabs(::UIkit, options::Associative; class="", outer = identity, outer_attributes = Dict(), kwargs...) =
-#     tabs(NativeHTML(), options;
-#         outer = outer∘Node(:ul, className = "tab tab-block", attributes = outer_attributes),
-#         class = "tab-item $class", kwargs...)
-#
+tabs(::UIkit, options::Associative; class="", outer = identity, activeclass = "uk-active", outer_attributes = Dict(), kwargs...) =
+    tabs(NativeHTML(), options;
+        outer = outer∘Node(:ul, className = "uk-tab", attributes = outer_attributes),
+        class = class, activeclass = activeclass, kwargs...)
+
 radiobuttons(T::UIkit, options::Associative; outer = identity, outer_attributes = Dict(), kwargs...) =
     radiobuttons(NativeHTML(), options::Associative;
         radiotype = T,
