@@ -3,8 +3,22 @@ module InteractUIkit
 using Reexport
 @reexport using InteractBase
 using WebIO, Vue, DataStructures
-import InteractBase: filepicker, autocomplete, input, dropdown, checkbox, toggle, textbox, button, slider
-import InteractBase: NativeHTML
+import InteractBase:
+    filepicker,
+    autocomplete,
+    input, dropdown,
+    checkbox,
+    toggle,
+    textbox,
+    button,
+    slider,
+    togglebuttons,
+    tabs,
+    radiobuttons,
+    radio,
+    wrap,
+    wdglabel,
+    NativeHTML
 
 export UIkit
 
