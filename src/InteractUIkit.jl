@@ -25,9 +25,9 @@ export UIkit
 struct UIkit<:InteractBase.WidgetTheme; end
 
 InteractBase.libraries(::UIkit) = [
-    "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/css/uikit.min.css",
-    "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/js/uikit.min.js",
-    "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/js/uikit-icons.min.js",
+    "/pkg/InteractUIkit/uikit-icons.min.js",
+    "/pkg/InteractUIkit/uikit.min.css",
+    "/pkg/InteractUIkit/uikit.min.js",
     "/pkg/InteractUIkit/toggle.css"
 ]
 
