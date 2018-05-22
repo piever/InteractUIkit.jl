@@ -10,8 +10,13 @@ dropdown(::UIkit, options::Associative; class="", kwargs...) =
 checkbox(::UIkit, args...; class="", kwargs...) =
     checkbox(NativeHTML(), args...; class="uk-checkbox $class", kwargs...)
 
-toggle(s::UIkit, args...; class="uk-checkbox", kwargs...) =
-    checkbox(NativeHTML(), args...; class=class, kwargs...)
+function toggle(s::UIkit, args...; class="", label = "", outer=hbox, kwargs...)
+    outerfunc = function (args...)
+        outer(dom"div.uk-onoffswitch"(args...), dom"label.uk-text-lead"(label))
+    end
+    cb = checkbox(NativeHTML(), args...; outer = outerfunc, label = "",
+        class="uk-onoffswitch-checkbox $class", labelclass = "uk-onoffswitch-label", kwargs...)
+end
 
 textbox(::UIkit, label=""; value="", class="", kwargs...) =
     input(NativeHTML(), value; typ="text", class="uk-input $class", placeholder=label, kwargs...)

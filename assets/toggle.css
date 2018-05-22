@@ -1,0 +1,32 @@
+.uk-onoffswitch {
+    position: relative; width: 60px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.uk-onoffswitch-checkbox {
+    display: none;
+}
+.uk-onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    height: 36px; padding: 0; line-height: 36px;
+    border: 2px solid #E3E3E3; border-radius: 36px;
+    background-color: rgb(221,221,221);
+    transition: background-color 0.3s ease-in;
+}
+.uk-onoffswitch-label:before {
+    content: "";
+    display: block; width: 36px; margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 22px;
+    border: 2px solid #E3E3E3; border-radius: 36px;
+    transition: all 0.3s ease-in 0s;
+}
+.uk-onoffswitch-checkbox:checked + .uk-onoffswitch-label {
+    background-color: #1E87F0;
+}
+.uk-onoffswitch-checkbox:checked + .uk-onoffswitch-label, .uk-onoffswitch-checkbox:checked + .uk-onoffswitch-label:before {
+   border-color: #1E87F0;
+}
+.uk-onoffswitch-checkbox:checked + .uk-onoffswitch-label:before {
+    right: 0px;
+}
