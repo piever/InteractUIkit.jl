@@ -18,8 +18,8 @@ end
 textbox(::UIkit, label=""; value="", class="", kwargs...) =
     input(NativeHTML(), value; typ="text", class="uk-input $class", placeholder=label, kwargs...)
 
-function slider(::UIkit, args...; class="uk-range", outer=(x,y)->dom"div"(x, dom"div.uk-inline[style=width:70%]"(y)), kwargs...)
-    slider(NativeHTML(), args...; class=class, outer=outer, kwargs...)
+function slider(::UIkit, vals::Range; class="uk-range", outer=(x,y)->dom"div"(x, dom"div.uk-inline[style=width:70%]"(y)), kwargs...)
+    slider(NativeHTML(), vals; class=class, outer=outer, kwargs...)
 end
 
 button(::UIkit, args...; class= "uk-button uk-button-primary", kwargs...) =
