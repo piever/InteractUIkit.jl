@@ -37,7 +37,6 @@ tabs(::UIkit, options::Associative; class="", outer = identity, activeclass = "u
 
 radiobuttons(T::UIkit, options::Associative; outer = identity, outer_attributes = Dict(), kwargs...) =
     radiobuttons(NativeHTML(), options::Associative;
-        radiotype = T,
         outer = outer∘Node(:div, className = "uk-margin uk-grid-small uk-child-width-auto uk-grid", attributes = outer_attributes),
         kwargs...)
 
