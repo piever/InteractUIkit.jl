@@ -4,9 +4,6 @@ filepicker(::UIkit, args...; class="", kwargs...) =
 dropdown(::UIkit, options::Associative; class="", kwargs...) =
     dropdown(NativeHTML(), options; postprocess = dom"div.select", class="uk-select $class", kwargs...)
 
-checkbox(::UIkit, args...; class="", kwargs...) =
-    checkbox(NativeHTML(), args...; class="uk-checkbox $class", kwargs...)
-
 function toggle(s::UIkit, args...; class="", label = "", outer=dom"div", kwargs...)
     outerfunc = function (args...)
         outer(dom"div.uk-inline"(dom"div.uk-onoffswitch"(args...)), dom"div.uk-inline"(dom"label.uk-text"(label)))
@@ -14,9 +11,6 @@ function toggle(s::UIkit, args...; class="", label = "", outer=dom"div", kwargs.
     cb = checkbox(NativeHTML(), args...; outer = outerfunc, label = (dom"span.uk-onoffswitch-inner"(), dom"span.uk-onoffswitch-switch"()),
         class="uk-onoffswitch-checkbox $class", labelclass = "uk-onoffswitch-label", kwargs...)
 end
-
-textbox(::UIkit, label=""; value="", class="", kwargs...) =
-    input(NativeHTML(), value; typ="text", class="uk-input $class", placeholder=label, kwargs...)
 
 function slider(::UIkit, vals::Range; class="uk-range", outer=(x,y)->dom"div"(x, dom"div.uk-inline[style=width:70%]"(y)), kwargs...)
     slider(NativeHTML(), vals; class=class, outer=outer, kwargs...)
@@ -43,3 +37,18 @@ radiobuttons(T::UIkit, options::Associative; outer = identity, outer_attributes 
 radio(T::UIkit, s, key, val, vmodel; class = "", kwargs...) =
     Node(:label, dom"input[class=uk-radio $class name = $s, type=radio, $vmodel=value, value=$val]"(), key,
         attributes = Dict(kwargs))
+
+function input(::UIkit, args...; class="", typ="text", kwargs...)
+    extra_class =
+        if typ=="radio"
+            "uk-radio"
+        elseif typ=="checkbox"
+            "uk-checkbox"
+        elseif typ=="range"
+            "uk-range"
+        else
+            "uk-input"
+        end
+
+    input(NativeHTML(), args...; class= extra_class * " " * class, typ=typ, kwargs...)
+end
