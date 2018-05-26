@@ -12,16 +12,12 @@ function toggle(s::UIkit, args...; class="", label = "", outer=dom"div", kwargs.
         class="uk-onoffswitch-checkbox $class", labelclass = "uk-onoffswitch-label", kwargs...)
 end
 
-function slider(::UIkit, vals::Range; class="uk-range", outer=(x,y)->dom"div"(x, dom"div.uk-inline[style=width:70%]"(y)), kwargs...)
-    slider(NativeHTML(), vals; class=class, outer=outer, kwargs...)
-end
+button(::UIkit, args...; class= "uk-button-primary", kwargs...) =
+    button(NativeHTML(), args...; class="uk-button $class", kwargs...)
 
-button(::UIkit, args...; class= "uk-button uk-button-primary", kwargs...) =
-    button(NativeHTML(), args...; class=class, kwargs...)
-
-togglebuttons(::UIkit, options::Associative; class="", outer = identity, activeclass = "uk-button-primary", outer_attributes = Dict(), kwargs...) =
+togglebuttons(::UIkit, options::Associative; class="uk-width-1-1", outer = identity, activeclass = "uk-button-primary", outer_attributes = Dict(), kwargs...) =
     togglebuttons(NativeHTML(), options;
-        outer = outer∘Node(:div, className = "uk-button-group", attributes = outer_attributes),
+        outer = outer∘Node(:div, className = "uk-button-group uk-width-1-1", attributes = outer_attributes),
         class = "uk-button $class", activeclass = activeclass, kwargs...)
 
 tabs(::UIkit, options::Associative; class="", outer = identity, activeclass = "uk-active", outer_attributes = Dict(), kwargs...) =
