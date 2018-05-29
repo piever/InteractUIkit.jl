@@ -9,11 +9,11 @@ function entry(::UIkit, style, args...; class="", kwargs...)
     entry(NativeHTML(), style, args...; class="$extraclass $class", kwargs...)
 end
 
-function toggle(s::UIkit, args...; class="", label = "", outer=dom"div", kwargs...)
+function toggle(::UIkit; class="", label = "", outer=dom"div", kwargs...)
     outerfunc = function (args...)
         outer(dom"div.uk-inline"(dom"div.uk-onoffswitch"(args...)), dom"div.uk-inline"(dom"label.uk-text"(label)))
     end
-    cb = checkbox(NativeHTML(), args...; outer = outerfunc, label = (dom"span.uk-onoffswitch-inner"(), dom"span.uk-onoffswitch-switch"()),
+    cb = checkbox(NativeHTML(); outer = outerfunc, label = (dom"span.uk-onoffswitch-inner"(), dom"span.uk-onoffswitch-switch"()),
         class="uk-onoffswitch-checkbox $class", labelclass = "uk-onoffswitch-label", kwargs...)
 end
 
