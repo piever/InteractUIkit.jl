@@ -2,7 +2,7 @@ filepicker(::UIkit, args...; class="", kwargs...) =
     filepicker(NativeHTML(), args...; class="uk-input $class", kwargs...)
 
 dropdown(::UIkit, options::Associative; class="", kwargs...) =
-    dropdown(NativeHTML(), options; postprocess = dom"div.select", class="uk-select $class", kwargs...)
+    dropdown(NativeHTML(), options; class="uk-select $class", kwargs...)
 
 function entry(::UIkit, style, args...; class="", kwargs...)
     extraclass = "uk-checkbox"
