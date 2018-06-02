@@ -55,4 +55,4 @@ function input(::UIkit, args...; class="", typ="text", kwargs...)
 end
 
 textarea(::UIkit, args...; class="", kwargs...) =
-    textarea(NativeHTML(), args...; class="uk-textarea $class", kwargs...) |> wrap
+    textarea(NativeHTML(), args...; class="uk-textarea $class", kwargs...)
