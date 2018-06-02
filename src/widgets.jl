@@ -53,3 +53,6 @@ function input(::UIkit, args...; class="", typ="text", kwargs...)
 
     input(NativeHTML(), args...; class= extra_class * " " * class, typ=typ, kwargs...)
 end
+
+textarea(::UIkit, args...; class="", kwargs...) =
+    textarea(NativeHTML(), args...; class="uk-textarea $class", kwargs...) |> wrap

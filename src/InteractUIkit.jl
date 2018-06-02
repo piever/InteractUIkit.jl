@@ -23,6 +23,8 @@ import InteractBase:
     entry,
     NativeHTML
 
+import InteractBase: textarea
+
 export UIkit
 
 struct UIkit<:InteractBase.WidgetTheme; end
