@@ -1,3 +1,5 @@
+__precompile__()
+
 module InteractUIkit
 
 using Reexport
@@ -32,7 +34,10 @@ InteractBase.libraries(::UIkit) = [
     "/pkg/InteractUIkit/toggle.css"
 ]
 
-InteractBase.settheme!(UIkit())
+function __init__()
+    InteractBase.settheme!(UIkit())
+    nothing
+end
 
 include("widgets.jl")
 
