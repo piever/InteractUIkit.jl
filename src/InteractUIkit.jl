@@ -21,7 +21,8 @@ import InteractBase:
     wrap,
     wdglabel,
     entry,
-    NativeHTML
+    NativeHTML,
+    getclass
 
 import InteractBase: textarea
 
@@ -41,6 +42,7 @@ function __init__()
     nothing
 end
 
+include("classes.jl")
 include("widgets.jl")
 
 end # module
