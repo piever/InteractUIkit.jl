@@ -17,6 +17,8 @@ function getclass(T::UIkit, arg, typ...)
         return ""
     elseif arg==:dropdown
         return "uk-select"
+    elseif arg==:div
+        return "uk-margin"
     else
         return ""
     end
