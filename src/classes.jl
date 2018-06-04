@@ -28,6 +28,8 @@ function getclass(T::UIkit, arg, typ...)
         return "uk-button-group uk-width-1-1"
     elseif arg==:tabs
         return "uk-tab"
+    elseif arg==:radiobuttons
+        return "uk-margin uk-grid-small uk-child-width-auto uk-grid"
     else
         return ""
     end
