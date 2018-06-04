@@ -4,6 +4,7 @@ function getclass(T::UIkit, arg, typ...)
 
     if arg == :input
         typ==("checkbox",) && return "uk-checkbox"
+        typ==("radio",) && return "uk-radio"
         typ==("toggle",) && return "uk-toggle"
         typ==("range",) && return "uk-range"
 
