@@ -34,7 +34,8 @@ InteractBase.libraries(::UIkit) = [
     "/pkg/InteractUIkit/uikit-icons.min.js",
     "/pkg/InteractUIkit/uikit.min.css",
     "/pkg/InteractUIkit/uikit.min.js",
-    "/pkg/InteractUIkit/toggle.css"
+    "/pkg/InteractUIkit/toggle.css",
+    "/pkg/InteractBase/all.js"
 ]
 
 function __init__()
