@@ -30,12 +30,18 @@ export UIkit
 
 struct UIkit<:InteractBase.WidgetTheme; end
 
+const uikit_icons_min_js = joinpath(@__DIR__, "..", "assets", "uikit-icons.min.js")
+const uikit_min_css = joinpath(@__DIR__, "..", "assets", "uikit.min.css")
+const uikit_min_js = joinpath(@__DIR__, "..", "assets", "uikit.min.js")
+const toggle_css = joinpath(@__DIR__, "..", "assets", "toggle.css")
+
+
 InteractBase.libraries(::UIkit) = [
-    "/pkg/InteractUIkit/uikit-icons.min.js",
-    "/pkg/InteractUIkit/uikit.min.css",
-    "/pkg/InteractUIkit/uikit.min.js",
-    "/pkg/InteractUIkit/toggle.css",
-    "/pkg/InteractBase/all.js"
+    uikit_icons_min_js,
+    uikit_min_css,
+    uikit_min_js,
+    toggle_css,
+    InteractBase.font_awesome
 ]
 
 function __init__()
