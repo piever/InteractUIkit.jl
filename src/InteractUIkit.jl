@@ -34,6 +34,7 @@ const uikit_icons_min_js = joinpath(@__DIR__, "..", "assets", "uikit-icons.min.j
 const uikit_min_css = joinpath(@__DIR__, "..", "assets", "uikit.min.css")
 const uikit_min_js = joinpath(@__DIR__, "..", "assets", "uikit.min.js")
 const toggle_css = joinpath(@__DIR__, "..", "assets", "toggle.css")
+const font_awesome = isdefined(InteractBase, :font_awesome) ? InteractBase.font_awesome : joinpath(Pkg.dir("InteractBase"), "assets", "all.js")
 
 
 InteractBase.libraries(::UIkit) = [
@@ -41,7 +42,7 @@ InteractBase.libraries(::UIkit) = [
     uikit_min_css,
     uikit_min_js,
     toggle_css,
-    InteractBase.font_awesome
+    font_awesome
 ]
 
 function __init__()
