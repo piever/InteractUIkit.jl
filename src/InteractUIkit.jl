@@ -4,7 +4,7 @@ module InteractUIkit
 
 using Reexport
 @reexport using InteractBase
-using WebIO, Vue, DataStructures, CSSUtil
+using WebIO, DataStructures, CSSUtil
 import InteractBase:
     filepicker,
     autocomplete,
