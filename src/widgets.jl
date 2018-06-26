@@ -1,4 +1,4 @@
-function toggle(::UIkit; class=nothing, className=InteractBase._replace_className(class), label = "", outer=dom"div", kwargs...)
+function toggle(::UIkit; className="", label = "", outer=dom"div", kwargs...)
     outerfunc = function (args...)
         outer(dom"div.uk-inline"(dom"div.uk-onoffswitch"(args...)), dom"div.uk-inline"(dom"label.uk-text"(label)))
     end
