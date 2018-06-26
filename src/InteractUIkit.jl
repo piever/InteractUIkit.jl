@@ -4,27 +4,10 @@ module InteractUIkit
 
 using Reexport
 @reexport using InteractBase
-using WebIO, DataStructures, CSSUtil
-import InteractBase:
-    filepicker,
-    autocomplete,
-    input, dropdown,
-    checkbox,
-    toggle,
-    textbox,
-    button,
-    slider,
-    togglebuttons,
-    tabs,
-    radiobuttons,
-    radio,
-    wrap,
-    wdglabel,
-    entry,
-    NativeHTML,
-    getclass
 
-import InteractBase: textarea
+import InteractBase:
+    toggle,
+    getclass
 
 export UIkit
 
