@@ -33,8 +33,7 @@ end
 
     a = spinbox(label = "")
     @test observe(a)[] == nothing
-    @test observe(a, "internalvalue")[] == ""
-    observe(a, "internalvalue")[] = "12"
+    a = spinbox(label = "", value = 12)
     @test observe(a)[] == 12
 
     a = textbox();
