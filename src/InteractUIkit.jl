@@ -4,6 +4,7 @@ module InteractUIkit
 
 using Reexport
 @reexport using InteractBase
+using WebIO
 
 import InteractBase:
     toggle,
