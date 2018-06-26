@@ -1,11 +1,11 @@
 function getclass(T::UIkit, arg, typ...)
-    length(typ) > 0 && last(typ) == "label" && return (typ[1] == "toggle") ? "uk-onoffswitch-label" : ""
+    length(typ) > 0 && last(typ) == "label" && return ""
 
     if arg == :input
         typ==() && return "uk-input"
         typ[1]=="checkbox" && return "uk-checkbox"
         typ[1]=="radio" && return "uk-radio"
-        typ[1]=="toggle" && return "uk-toggle"
+        typ[1]=="toggle" && return ""
         typ[1]=="range" && return "uk-range"
 
         if typ[1]=="file"
