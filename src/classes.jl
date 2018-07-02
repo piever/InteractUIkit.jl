@@ -22,7 +22,7 @@ function getclass(T::UIkit, arg, typ...)
         return "uk-button"
     elseif arg==:tab
         typ==("active",) && return "uk-active"
-        return ""
+        return "not-active"
     elseif arg == :textarea
         return "uk-textarea"
     elseif arg==:wdglabel
