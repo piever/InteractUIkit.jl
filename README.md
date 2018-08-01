@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/piever/InteractUIkit.jl.svg?branch=master)](https://travis-ci.org/piever/InteractUIkit.jl)
 [![codecov.io](http://codecov.io/github/piever/InteractUIkit.jl/coverage.svg?branch=master)](http://codecov.io/github/piever/InteractUIkit.jl?branch=master)
 
+**InteractUIkit is deprecated, use the Bulma backend instead**
+
 Package to create simple web apps in Julia based on [InteractBase](https://github.com/piever/InteractBase.jl/). To install the package and its dependencies simply run the following code in the REPL:
 
 ```julia
